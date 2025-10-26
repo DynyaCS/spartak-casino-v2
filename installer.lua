@@ -41,12 +41,6 @@ local DIR = "/home/casino"
 local files = {
     {url = "server/main.lua", path = "/home/casino/server/main.lua"},
     {url = "terminal/main.lua", path = "/home/casino/terminal/main.lua"},
-    {url = "terminal/deposit.lua", path = "/home/casino/terminal/deposit.lua"},
-    {url = "terminal/ui.lua", path = "/home/casino/terminal/ui.lua"},
-    {url = "lib/database.lua", path = "/home/casino/lib/database.lua"},
-    {url = "lib/games.lua", path = "/home/casino/lib/games.lua"},
-    {url = "lib/network.lua", path = "/home/casino/lib/network.lua"},
-    {url = "lib/pim.lua", path = "/home/casino/lib/pim.lua"},
 }
 
 -- Функция извлечения пути к директории
@@ -126,7 +120,6 @@ local dirs = {
     "/home/casino",
     "/home/casino/server",
     "/home/casino/terminal",
-    "/home/casino/lib",
     "/home/casino/data",
     "/home/casino/logs",
 }
@@ -173,7 +166,6 @@ if not fs.exists(cfg) then
     version = "2.0",
     network = {port = 5555, timeout = 5},
     games = {minBet = 1, maxBet = 100},
-    deposit = {minAmount = 1, maxAmount = 10000},
 }
 ]])
         fs.close(fh)
